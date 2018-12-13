@@ -279,28 +279,28 @@ textarea {
 @media only screen and (max-width: 980px) {
     
     .navWrapper {
-        width: 780px;
+        width: 750px;
         margin: 0 auto;
     }
 
     section {
-        width: 780px;
+        width: 750px;
         padding-top: 120px;
         margin: 0 auto;
     }
 
     .portfolio ul {
-        width: 610px;
+        width: 580px;
         margin: 0 auto;
         text-align: justify;
     }
 
     .form {
-        width: 730px; /* 650 - 50 from padding */
+        width: 700px; /* 750 - 50 from padding */
     }
 
     input[type=text], textarea {
-        width: 700px; /* 650 - 50 -30 from padding */
+        width: 670px; /* 750 - 50 -30 from padding */
     }
 
 }
@@ -316,18 +316,18 @@ textarea {
     }
 
     .navWrapper {
-        width: 650px;
+        width: 620px;
         margin: 0 auto;
     }
 
     section {
-        width: 650px;
+        width: 620px;
         padding-top: 72px;
         margin: 0 auto;
     }
 
     .portfolio ul {
-        width: 510px;
+        width: 480px;
         margin: 0 auto;
         text-align: justify;
     }
@@ -337,11 +337,11 @@ textarea {
     }
 
     .form {
-        width: 600px; /* 650 - 50 from padding */
+        width: 570px; /* 620 - 50 from padding */
     }
 
     input[type=text], textarea {
-        width: 570px; /* 650 - 50 -30 from padding */
+        width: 540px; /* 650 - 50 -30 from padding */
     }
     
 }
@@ -357,30 +357,30 @@ textarea {
     }
 
     .navWrapper {
-        width: 375px;
+        width: 420px;
         margin: 0 auto;
     }
 
     section {
-        width: 375px;
+        width: 420px;
         padding-top: 72px;
         margin: 0 auto;
         background-color: #ffffff;
     }
 
     .portfolio ul {
-        width: 310px;
+        width: 380px;
         margin: 0 auto;
         text-align: justify;
         background-color: #ffffff;
     }
 
     .form {
-        width: 387px; /* 437 - 50 from padding */
+        width: 370px; /* 420 - 50 from padding */
     }
 
     input[type=text], textarea {
-        width: 357px; /* 437 - 50 -30 from padding */
+        width: 340px; /* 437 - 50 -30 from padding */
     }
 
     /* Hamburger Nav */
@@ -412,7 +412,7 @@ textarea {
 
     .topnav {
         overflow: hidden;
-        min-width: 145px;
+        min-width: 190px; /* 420 - 230  */
         float: left;
         background-color: #F0FFFF;
         border-bottom: 1px solid #dddddd;
