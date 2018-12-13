@@ -142,13 +142,13 @@ hr {
 
  .navRight {
     float: right;
-    font-size: 17px;
+    font-size: 14px;
 }
 
 
 .topnav {
   overflow: hidden;
-  padding-left: 27px;
+  padding-left: 0px;
   min-height: 72px;
   background-color: #ffffff;
 }
@@ -157,7 +157,7 @@ hr {
   float: left;
   display: block;
   text-align: center;
-  padding: 27px 16px;
+  padding: 29px 16px;
   margin: 0;
 }
 
@@ -357,12 +357,12 @@ textarea {
     }
 
     .navWrapper {
-        width: 437px;
+        width: 375px;
         margin: 0 auto;
     }
 
     section {
-        width: 437px;
+        width: 375px;
         padding-top: 72px;
         margin: 0 auto;
         background-color: #ffffff;
@@ -412,7 +412,7 @@ textarea {
 
     .topnav {
         overflow: hidden;
-        min-width: 180px;
+        min-width: 145px;
         float: left;
         background-color: #F0FFFF;
         border-bottom: 1px solid #dddddd;
