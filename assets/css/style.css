@@ -100,8 +100,6 @@ hr {
     padding: 24px 16px;
 }
 
-
-
 /* Navigation menu items */
 .navWrapper ul li {
     display: inline-block;
@@ -128,16 +126,57 @@ hr {
 }
 
 .navWrapper a:hover {
-    background-color: #4aaaa5;
+    background-color: #ABCCCB;
     color: #ffffff;
 }
 
 .navWrapper a.active {
-    background-color: #53BFBA;
+    background-color: #809998;
     color: #ffffff;
 }
 
 /*---------- Navigation End ----------*/
+
+
+ /*------------ Hamburger Nav ------------*/
+
+ .navRight {
+    float: right;
+    font-size: 17px;
+}
+
+
+.topnav {
+  overflow: hidden;
+  padding-left: 27px;
+  min-height: 72px;
+  background-color: #ffffff;
+}
+
+.topnav a {
+  float: left;
+  display: block;
+  text-align: center;
+  padding: 27px 16px;
+  margin: 0;
+}
+
+.topnav a:hover {
+  background-color: #ABCCCB;
+  color: #000000;
+}
+
+.active {
+  background-color: #809998;
+  
+  color: #000000 !important;
+}
+
+.topnav .icon {
+  display: none;
+}
+
+/*---------- Hamburger Nav End ----------*/
 
 
 /*------------ About Page ------------*/
@@ -170,7 +209,7 @@ img.profile {
 	width: 270px;
     height: 200px;
     border: 1px solid #dddddd;
-    margin: 15px;
+    margin: 15px auto;
     padding: 0;
     transition: all .2s ease-in-out; /* Scale on Hover with Transition */
 }
@@ -220,7 +259,7 @@ textarea {
 }
 
 #submit {
-	background-color: #4aaaa5;
+	background-color: #809998;
 	color: #ffffff;
 	border: none;
     padding: 15px 24px;
@@ -229,122 +268,161 @@ textarea {
 
 #submit:hover
 {
-  background-color: #53BFBA;
+  background-color: #ABCCCB;
 }
 
 /*---------- Contact Page End ----------*/
 
+
 /*------------ Media Queries ------------*/
 
 @media only screen and (max-width: 980px) {
+    
     .navWrapper {
         width: 780px;
         margin: 0 auto;
     }
+
     section {
         width: 780px;
         padding-top: 120px;
         margin: 0 auto;
     }
+
+    .portfolio ul {
+        width: 610px;
+        margin: 0 auto;
+        text-align: justify;
+    }
+
+    .form {
+        width: 730px; /* 650 - 50 from padding */
+    }
+
+    input[type=text], textarea {
+        width: 700px; /* 650 - 50 -30 from padding */
+    }
+
 }
 
 @media only screen and (max-width: 768px) {
+    
+    html {
+        background: #ffffff;
+    }
+
+    .about, .contact, .portfolio {
+        margin-bottom: 60px;
+    }
+
     .navWrapper {
         width: 650px;
         margin: 0 auto;
     }
+
     section {
         width: 650px;
         padding-top: 72px;
         margin: 0 auto;
     }
+
+    .portfolio ul {
+        width: 510px;
+        margin: 0 auto;
+        text-align: justify;
+    }
+
+    .portfolio li {
+        display: block;
+    }
+
+    .form {
+        width: 600px; /* 650 - 50 from padding */
+    }
+
+    input[type=text], textarea {
+        width: 570px; /* 650 - 50 -30 from padding */
+    }
+    
 }
 
 @media only screen and (max-width: 640px) {
+    
+    html {
+        background: #ffffff;
+    }
+
+    .about, .contact, .portfolio {
+        margin-bottom: 60px;
+    }
+
     .navWrapper {
-        width: 450px;
+        width: 437px;
         margin: 0 auto;
     }
+
     section {
-        width: 450px;
+        width: 437px;
         padding-top: 72px;
         margin: 0 auto;
+        background-color: #ffffff;
     }
+
+    .portfolio ul {
+        width: 310px;
+        margin: 0 auto;
+        text-align: justify;
+        background-color: #ffffff;
+    }
+
+    .form {
+        width: 387px; /* 437 - 50 from padding */
+    }
+
+    input[type=text], textarea {
+        width: 357px; /* 437 - 50 -30 from padding */
+    }
+
+    /* Hamburger Nav */
+    .topnav a {
+        display: none;
+        color: #ffffff;
+    }
+    
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+  
+    .topnav.responsive {
+        position: relative;
+    }
+
+    .topnav.responsive .icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    .topnav.responsive a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
+    .topnav {
+        overflow: hidden;
+        min-width: 180px;
+        float: left;
+        background-color: #F0FFFF;
+        border-bottom: 1px solid #dddddd;
+        border-left: 1px solid #dddddd;
+        border-right: 1px solid #dddddd;
+        
+    }
+    /* Hamburger Nav End */
+
 }
     
 
 /*---------- Media Queries End ----------*/
-
-
-.navRight {
-    float: right;
-    font-size: 18px;
-}
-
-/* 
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-} */
-
-.topnav {
-  overflow: hidden;
-  float: left;
-  padding-left: 41px;
-  min-height: 72px;
-  background-color: #ffffff;
-}
-
-.topnav a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.active {
-  background-color: #4CAF50;
-  color: white;
-}
-
-.topnav .icon {
-  display: none;
-}
-
-@media screen and (max-width: 650px) {
-  .topnav a:not(:first-child) {display: none;}
-  .topnav a.icon {
-    float: right;
-    display: block;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .topnav.responsive {position: relative;}
-  .topnav.responsive .icon {
-    position: absolute;
-    right: 0;
-    top: 0;
-  }
-  .topnav.responsive a {
-    float: none;
-    display: block;
-    text-align: left;
-  }
-  .topnav {
-    overflow: hidden;
-    min-width: 180px;
-    float: left;
-    background-color: #ffffff;
-    border-bottom: 1px solid #dddddd;
-    border-left: 1px solid #dddddd;
-  }
-}
