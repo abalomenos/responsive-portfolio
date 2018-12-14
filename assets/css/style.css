@@ -307,16 +307,26 @@ textarea {
         background: #ffffff;
     }
 
+    body {
+        position: relative;
+        margin: 0;
+        padding-bottom: 80px;
+        min-height: 100%;
+    }
+
     .about, .contact, .portfolio {
-        margin-bottom: 60px;
+        margin-bottom: 0;
     }
 
     footer {
-        position: static;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
     }
 
     nav {
-        position: sticky;
+        position: static;
         width: 100%;
         margin: 0 auto;
     }
@@ -364,19 +374,49 @@ textarea {
         background: #ffffff;
     }
 
-    .about, .contact, .portfolio {
-        margin-bottom: 60px;
+    body {
+        position: relative;
+        margin: 0;
+        padding-bottom: 80;
+        min-height: 100%;
+    }
+
+    /* .about, .contact, .portfolio {
+        margin-bottom: 0;
     }
 
     footer {
-        position: static;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
     }
 
     nav {
         position: sticky;
         width: 100%;
         margin: 0 auto;
+    } */
+
+
+    .about, .contact, .portfolio {
+        margin-bottom: 0;
     }
+
+    footer {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    nav {
+        position: relative;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
     
     .navWrapper {
         width: 100%;
@@ -395,7 +435,7 @@ textarea {
         margin: 0 auto;
         padding-left: 0;
         padding-right: 0;
-        text-align: justify;
+        text-align: center;
         background-color: #ffffff;
     }
 
@@ -422,8 +462,9 @@ textarea {
     .navRight {
         position: absolute;
         width: 100%;
-        
         text-align: right;
+        left: 0;
+        top: 0;
     }
 
     /* Hamburger Nav */
