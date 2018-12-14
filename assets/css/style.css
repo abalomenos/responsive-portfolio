@@ -357,30 +357,30 @@ textarea {
     }
 
     .navWrapper {
-        width: 365px;
+        width: 355px;
         margin: 0 auto;
     }
 
     section {
-        width: 365px;
+        width: 355px;
         padding-top: 72px;
         margin: 0 auto;
         background-color: #ffffff;
     }
 
     .portfolio ul {
-        width: 325px;
+        width: 315px;
         margin: 0 auto;
         text-align: justify;
         background-color: #ffffff;
     }
 
     .form {
-        width: 315px; /* 420 - 50 from padding */
+        width: 305px; /* 420 - 50 from padding */
     }
 
     input[type=text], textarea {
-        width: 285px; /* 420 - 50 -30 from padding */
+        width: 275px; /* 420 - 50 -30 from padding */
     }
 
     /* Hamburger Nav */
