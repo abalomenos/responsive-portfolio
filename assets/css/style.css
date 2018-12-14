@@ -355,29 +355,29 @@ textarea {
     /* Below was requested, but with Hamburger menu not needed */
     nav {
         position: sticky;
-        width: 410px;
+        width: 400;
         margin: 0 auto;
     }
 
     .navLeft {
-        width: 410px;
+        width: 100%;
         padding: 24px 0;
         text-align: center;
     }
     
     .navRight {
         position: absolute;
-        width: 410px;
+        width: 100%;
         
         text-align: right;
     }
     .navWrapper {
-        width: 410px;
+        width: 100%;
         margin: 0 auto;
     }
 
     section {
-        width: 400px;
+        width: 390px;
         padding-top: 0px;
         margin: 0 auto;
         background-color: #ffffff;
@@ -388,18 +388,18 @@ textarea {
     }
 
     .portfolio ul {
-        width: 350px;
+        width: 340px;
         margin: 0 auto;
         text-align: justify;
         background-color: #ffffff;
     }
 
     .form {
-        width: 350px; /* 420 - 50 from padding */
+        width: 340px; /* 420 - 50 from padding */
     }
 
     input[type=text], textarea {
-        width: 320px; /* 420 - 50 -30 from padding */
+        width: 310px; /* 420 - 50 -30 from padding */
     }
 
     /* Hamburger Nav */
