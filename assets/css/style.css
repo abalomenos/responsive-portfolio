@@ -306,38 +306,54 @@ textarea {
     html {
         background: #ffffff;
     }
-/* 
+
     .about, .contact, .portfolio {
         margin-bottom: 60px;
-    } */
+    }
 
+    footer {
+        position: static;
+    }
+
+    nav {
+        position: sticky;
+        width: 100%;
+        margin: 0 auto;
+    }
+    
     .navWrapper {
-        width: 620px;
+        width: 100%;
         margin: 0 auto;
     }
 
     section {
-        width: 620px;
-        /* padding-top: 72px; */
+        width: 100%;
+        padding-top: 0px;
         margin: 0 auto;
+        background-color: #ffffff;
     }
 
     .portfolio ul {
-        width: 480px;
+        width: 100%;
         margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
         text-align: justify;
-    }
-
-    .portfolio li {
-        display: block;
+        background-color: #ffffff;
     }
 
     .form {
-        width: 570px; /* 620 - 50 from padding */
+        width: 100%;
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
     }
 
     input[type=text], textarea {
-        width: 540px; /* 650 - 50 -30 from padding */
+        width: 100%;
+        margin: 0 auto;
+        padding-left: 0;
+        padding-right: 0;
     }
     
 }
@@ -352,25 +368,16 @@ textarea {
         margin-bottom: 60px;
     }
 
-    /* Below was requested, but with Hamburger menu not needed */
-    nav {
-        position: sticky;
-        width: 355px;
-        margin: 0 auto;
+    footer {
+        position: static;
     }
 
-    .navLeft {
+    nav {
+        position: sticky;
         width: 100%;
-        padding: 24px 0;
-        text-align: center;
+        margin: 0 auto;
     }
     
-    .navRight {
-        position: absolute;
-        width: 100%;
-        
-        text-align: right;
-    }
     .navWrapper {
         width: 100%;
         margin: 0 auto;
@@ -381,10 +388,6 @@ textarea {
         padding-top: 0px;
         margin: 0 auto;
         background-color: #ffffff;
-    }
-
-    footer {
-        position: static;
     }
 
     .portfolio ul {
@@ -408,6 +411,19 @@ textarea {
         margin: 0 auto;
         padding-left: 0;
         padding-right: 0;
+    }
+
+    .navLeft {
+        width: 100%;
+        padding: 24px 0;
+        text-align: center;
+    }
+    
+    .navRight {
+        position: absolute;
+        width: 100%;
+        
+        text-align: right;
     }
 
     /* Hamburger Nav */
