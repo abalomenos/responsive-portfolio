@@ -356,82 +356,9 @@ textarea {
         margin-bottom: 60px;
     }
 
-    .navWrapper {
-        width: 540px;
-        margin: 0 auto;
-    }
-
-    section {
-        width: 530px;
-        padding-top: 72px;
-        margin: 0 auto;
-        background-color: #ffffff;
-    }
-
-    .portfolio ul {
-        width: 480px;
-        margin: 0 auto;
-        text-align: justify;
-        background-color: #ffffff;
-    }
-
-    .form {
-        width: 480px; /* 420 - 50 from padding */
-    }
-
-    input[type=text], textarea {
-        width: 470px; /* 420 - 50 -30 from padding */
-    }
-
-    /* Hamburger Nav */
-    .topnav a {
-        display: none;
-        color: #ffffff;
-    }
-    
-    .topnav a.icon {
-        float: right;
-        display: block;
-    }
-  
-    .topnav.responsive {
-        position: relative;
-    }
-
-    .topnav.responsive .icon {
-        position: absolute;
-        right: 0;
-        top: 0;
-    }
-
-    .topnav.responsive a {
-        float: none;
-        display: block;
-        text-align: left;
-    }
-
-    .topnav {
-        overflow: hidden;
-        min-width: 312px; /* 420 - 230  */
-        float: left;
-        background-color: #F0FFFF;
-        border-bottom: 1px solid #dddddd;
-        border-left: 1px solid #dddddd;
-        border-right: 1px solid #dddddd;
-        
-    }
-    /* Hamburger Nav End */
-
-}
-
-@media only screen and (max-width: 420px) {
-    
-    html {
-        background: #ffffff;
-    }
-
-    .about, .contact, .portfolio {
-        margin-bottom: 60px;
+    nav {
+        position: static;
+        z-index: unset;
     }
 
     .navWrapper {
