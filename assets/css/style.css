@@ -21,11 +21,11 @@ footer {
     position: fixed;
     bottom: 0px;
     width: 100%;
-    padding-top: 40px;
+    padding-top: 20px; /* changed padding from original, did not like the look */
     padding-bottom: 10px;
 	color: #cccccc;
 	background-color: #666666;
-	border-top: 8px solid #4aaaa5;
+	border-top: 6px solid #4aaaa5; /* changed porder from original, did not like the look */
     text-align: center;
 }
 
@@ -157,20 +157,16 @@ nav {
   float: left;
   display: block;
   text-align: center;
-  padding: 29px 16px;
+  padding: 28px 16px;
   margin: 0;
 }
 
+/*Hamburger color */
 .topnav a:hover {
   background-color: #ABCCCB;
   color: #000000;
 }
 
-.active {
-  background-color: #809998;
-  
-  color: #000000 !important;
-}
 
 .topnav .icon {
   display: none;
@@ -310,10 +306,10 @@ textarea {
     html {
         background: #ffffff;
     }
-
+/* 
     .about, .contact, .portfolio {
         margin-bottom: 60px;
-    }
+    } */
 
     .navWrapper {
         width: 620px;
@@ -322,7 +318,7 @@ textarea {
 
     section {
         width: 620px;
-        padding-top: 72px;
+        /* padding-top: 72px; */
         margin: 0 auto;
     }
 
@@ -356,11 +352,25 @@ textarea {
         margin-bottom: 60px;
     }
 
+    /* Below was requested, but with Hamburger menu not needed */
     nav {
-        position: static;
-        z-index: unset;
+        position: sticky;
+        width: 410px;
+        margin: 0 auto;
     }
 
+    .navLeft {
+        width: 410px;
+        padding: 24px 0;
+        text-align: center;
+    }
+    
+    .navRight {
+        position: absolute;
+        width: 410px;
+        
+        text-align: right;
+    }
     .navWrapper {
         width: 410px;
         margin: 0 auto;
@@ -368,9 +378,13 @@ textarea {
 
     section {
         width: 400px;
-        padding-top: 72px;
+        padding-top: 0px;
         margin: 0 auto;
         background-color: #ffffff;
+    }
+
+    footer {
+        position: static;
     }
 
     .portfolio ul {
@@ -391,38 +405,60 @@ textarea {
     /* Hamburger Nav */
     .topnav a {
         display: none;
-        color: #ffffff;
+        color: #dddddd;
+        font-size: 16px;
     }
-    
+
     .topnav a.icon {
         float: right;
+        text-align: right;
         display: block;
+        width: 100%;
+        background-color: transparent;
     }
   
     .topnav.responsive {
         position: relative;
+        padding-top: 73px;
     }
 
     .topnav.responsive .icon {
         position: absolute;
         right: 0;
         top: 0;
+        text-align: right;
+        background-color: transparent;
     }
+    
 
     .topnav.responsive a {
         float: none;
         display: block;
-        text-align: left;
+        text-align: center;
+        color: #dddddd;
+        background-color:rgba(65, 65, 65, 0.6);
+        border-bottom: 2px solid #dddddd;
+    }
+
+    .topnav.responsive a:hover {
+        color: #CCAE1D;
+        background-color:rgba(0, 0, 0, 0.6);
+    }
+
+    .topnav.responsive a.active {
+        color: #0AE5DF;
+        background-color:rgba(0, 0, 0, 0.8);
     }
 
     .topnav {
-        overflow: hidden;
-        min-width: 182px; /* 420 - 230  */
-        float: left;
-        background-color: #F0FFFF;
-        border-bottom: 1px solid #dddddd;
+        /* overflow: hidden; */
+        /* min-width: 182px; */
+        min-width: 100%;
+        float: right;
+        background-color: transparent;
+        /* border-bottom: 1px solid #dddddd;
         border-left: 1px solid #dddddd;
-        border-right: 1px solid #dddddd;
+        border-right: 1px solid #dddddd; */
         
     }
     /* Hamburger Nav End */
