@@ -357,30 +357,30 @@ textarea {
     }
 
     .navWrapper {
-        width: 375px;
+        width: 365px;
         margin: 0 auto;
     }
 
     section {
-        width: 375px;
+        width: 365px;
         padding-top: 72px;
         margin: 0 auto;
         background-color: #ffffff;
     }
 
     .portfolio ul {
-        width: 335px;
+        width: 325px;
         margin: 0 auto;
         text-align: justify;
         background-color: #ffffff;
     }
 
     .form {
-        width: 355px; /* 420 - 50 from padding */
+        width: 315px; /* 420 - 50 from padding */
     }
 
     input[type=text], textarea {
-        width: 325px; /* 420 - 50 -30 from padding */
+        width: 285px; /* 420 - 50 -30 from padding */
     }
 
     /* Hamburger Nav */
@@ -412,7 +412,7 @@ textarea {
 
     .topnav {
         overflow: hidden;
-        min-width: 145px; /* 420 - 230  */
+        min-width: 135px; /* 420 - 230  */
         float: left;
         background-color: #F0FFFF;
         border-bottom: 1px solid #dddddd;
