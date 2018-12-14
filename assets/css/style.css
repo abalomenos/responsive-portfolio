@@ -355,7 +355,7 @@ textarea {
     /* Below was requested, but with Hamburger menu not needed */
     nav {
         position: sticky;
-        width: 375px;
+        width: 370px;
         margin: 0 auto;
     }
 
