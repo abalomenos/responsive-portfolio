@@ -412,7 +412,7 @@ textarea {
 
     .topnav {
         overflow: hidden;
-        min-width: 135px; /* 420 - 230  */
+        min-width: 125px; /* 420 - 230  */
         float: left;
         background-color: #F0FFFF;
         border-bottom: 1px solid #dddddd;
