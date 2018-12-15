@@ -2,7 +2,18 @@
 /*------------ Main Structure ------------*/
 
 html {
-    background: url("../images/background.png") repeat;
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) repeat, url("../images/background_img.jpg") no-repeat center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    
+    min-height: 100%;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;
+    
 }
 
 body {
@@ -11,36 +22,36 @@ body {
     font-size: 16px;
 }
 
-section {
-    width: 960px;
-    padding-top: 150px;
-    margin: 0 auto;
-}
-
-footer {
-    position: fixed;
-    bottom: 0px;
-    width: 100%;
-    padding-top: 20px; /* changed padding from original, did not like the look */
-    padding-bottom: 10px;
-	color: #cccccc;
-	background-color: #666666;
-	border-top: 6px solid #4aaaa5; /* changed porder from original, did not like the look */
-    text-align: center;
-}
-
-/* Standard for all pages */
 .about, .contact, .portfolio {
-    position: relative;
-    width: 910; /* 960 - 50 from padding */
     padding: 25px;
-    margin-bottom: 150px;
     color: #777777;
     background-color: #ffffff;
     border-color: #dddddd;
     font-size: 16px;
     line-height: 1.5;
     text-align: left;
+}
+
+section {
+    width: 960px;
+    padding: 125px 0;
+    margin: 0 auto;
+    background-color: transparent;
+    overflow: hidden;
+    display: block;
+    position: relative;    
+}
+
+footer {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+    padding-top: 20px; /* changed padding from basic portfolio, did not like the look :) */
+    padding-bottom: 10px;
+	color: #cccccc;
+	background-color: #666666;
+	border-top: 4px solid #73a5bd; /* changed porder from basic portfolio, did not like the look of :) */
+    text-align: center;
 }
 
 /* Clearfix hack */
@@ -57,13 +68,17 @@ h1 {
     color: #ffffff;
     border-color: #cccccc;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    
+    /* CSS Animations */
+    -webkit-animation: logo1 linear 10s 5s forwards; /* Safari 4.0 - 8.0 */
+    animation: logo1 linear 10s 5s forwards;
 }
 
 /* Define h2 style */
 h2 {
     font-size: 34px;
     font-weight: bold;
-    color: #4aaaa5;
+    color: #1387b8;;
     border-color: #cccccc;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -83,6 +98,7 @@ hr {
 nav {
     position: fixed;
     width: 100%;
+    margin: 0 auto;
     height: 72px;
     background-color: #ffffff;
     border-bottom: 4px solid #cccccc;
@@ -96,9 +112,13 @@ nav {
 
 .navLeft {
     float:left;
-    background-color: #4aaaa5;
+    background-color: #7daabc;
     padding: 24px 15px;
     margin: 0;
+    
+    /* CSS Animations */
+    -webkit-animation: logo2 linear 10s 5s forwards; /* Safari 4.0 - 8.0 */
+    animation: logo2 linear 10s 5s forwards;
 }
 
 .navRight {
@@ -111,10 +131,10 @@ nav {
     display: inline-block;
 }
 
-/* Navigation separator | */
-.navWrapper ul li+li {
+/* Navigation separator | */ /* Not used here, keeping it for future reference */
+/* .navWrapper ul li+li {
 	border-left: 1px solid #dddddd;
-}
+} */
  
 .navWrapper a {
     padding: 100% 8px 30px 8px;
@@ -124,21 +144,19 @@ nav {
 }
 
 .navWrapper a:link {
-    color: #777777;
+    color: #999999;
 }
 
 .navWrapper a:visited {
-    color: #777777;
+    color: #999999;
 }
 
 .navWrapper a:hover {
-    background-color: #ABCCCB;
-    color: #ffffff;
+    color: #222222;
 }
 
 .navWrapper a.active {
-    background-color: #809998;
-    color: #ffffff;
+    color: #222222;
 }
 
 /*---------- Navigation End ----------*/
@@ -163,10 +181,8 @@ nav {
 
 /*Hamburger color */
 .topnav a:hover {
-  background-color: #ABCCCB;
   color: #000000;
 }
-
 
 .topnav .icon {
   display: none;
@@ -194,9 +210,12 @@ img.profile {
 /*------------ Portfolio Page ------------*/
 
 .portfolio ul {
-    width: 610px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+    width: 100%;
     margin: 0 auto;
-    text-align: justify;
+    text-align: center;
 }
 
 .portfolio li {
@@ -205,7 +224,7 @@ img.profile {
 	width: 270px;
     height: 200px;
     border: 1px solid #dddddd;
-    margin: 15px auto;
+    margin: 10px;
     padding: 0;
     transition: all .2s ease-in-out; /* Scale on Hover with Transition */
 }
@@ -215,7 +234,7 @@ img.profile {
     width: 270px;
 	bottom: 50px;
 	text-align: center;
-	background-color: #4aaaa5;
+	background-color: #7daabc;
 	padding: 10px 0px 10px 0px;
 	color: #ffffff;
 }
@@ -231,9 +250,10 @@ img.profile {
 /*------------ Contact Page ------------*/
 
 .form {
-    width: 910px; /* 960 - 50 from padding */
+    width: 100%;
     margin: 0 auto;
-    padding: 0 auto;
+    padding-left: 0;
+    padding-right: 0;
 }
 
 #contactform {
@@ -243,11 +263,20 @@ img.profile {
 }
 
 input[type=text], textarea {
-    width: 880px; /* 960 - 50 -30 from padding */
+    width: 100%;
+    margin: 0 auto;
     padding: 15px;
     border: 1px solid #dddddd;
     color: #cccccc;
     border-radius: 4px; /* rounded corners */
+
+    /* Avoid input and textarea getting pushed outside of div from padding */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+/* Avoid input and textarea getting pushed outside of div from padding */
 }
 
 textarea {
@@ -255,7 +284,7 @@ textarea {
 }
 
 #submit {
-	background-color: #809998;
+	background-color: #7daabc;
 	color: #ffffff;
 	border: none;
     padding: 15px 24px;
@@ -270,38 +299,135 @@ textarea {
 /*---------- Contact Page End ----------*/
 
 
+/*------------ CSS Animations ------------*/
+
+@-webkit-keyframes logo1 { /* Safari 4.0 - 8.0 */
+    from {
+        color: #ffffff;
+    }
+    to {
+        color: transparent;
+    }
+}
+
+  @-webkit-keyframes logo2 { /* Safari 4.0 - 8.0 */
+    0% {
+        opacity: 1;
+        background: unset;
+        background-color: #7daabc;
+    }
+    20% {
+        opacity: 0.5;
+        background: unset;
+        background-color: #7daabc;
+    }
+    40% {
+        opacity: 0;
+        background: unset;
+        background-color: #7daabc;
+    }
+    60% {
+        opacity: 0;
+        background: url("../images/skycomtechS.png");
+        background-repeat:no-repeat;
+        background-size: auto;
+        image-rendering: auto;
+        image-rendering: crisp-edges;
+        image-rendering: pixelated;
+    }
+    80% {
+        opacity: 0.5;
+        background: url("../images/skycomtechS.png");
+        background-repeat:no-repeat;
+        background-size: auto;
+        image-rendering: auto;
+        image-rendering: crisp-edges;
+        image-rendering: pixelated;
+    }
+    100% {
+        opacity: 1;
+        background: url("../images/skycomtechS.png");
+        background-repeat:no-repeat;
+        background-size: auto;
+        image-rendering: auto;
+        image-rendering: crisp-edges;
+        image-rendering: pixelated;
+    }
+  }
+  
+  /* Standard syntax */
+  @keyframes logo1 {
+    from {
+        color: #ffffff;
+    }
+    to {
+        color: transparent;
+    }
+}
+
+  @keyframes logo2 {
+    0% {
+        opacity: 1;
+        background: unset;
+        background-color: #7daabc;
+    }
+    20% {
+        opacity: 0.5;
+        background: unset;
+        background-color: #7daabc;
+    }
+    40% {
+        opacity: 0;
+        background: unset;
+        background-color: #7daabc;
+    }
+    60% {
+        opacity: 0;
+        background: url("../images/skycomtechS.png");
+        background-repeat:no-repeat;
+        background-size: auto;
+        image-rendering: auto;
+        image-rendering: crisp-edges;
+        image-rendering: pixelated;
+    }
+    80% {
+        opacity: 0.5;
+        background: url("../images/skycomtechS.png");
+        background-repeat:no-repeat;
+        background-size: auto;
+        image-rendering: auto;
+        image-rendering: crisp-edges;
+        image-rendering: pixelated;
+    }
+    100% {
+        opacity: 1;
+        background: url("../images/skycomtechS.png");
+        background-repeat:no-repeat;
+        background-size: auto;
+        image-rendering: auto;
+        image-rendering: crisp-edges;
+        image-rendering: pixelated;
+    }
+}
+
+/*---------- CSS Animations End ----------*/
+
+
 /*------------ Media Queries ------------*/
 
 @media only screen and (max-width: 980px) {
     
     .navWrapper {
         width: 750px;
-        margin: 0 auto;
     }
 
     section {
         width: 750px;
-        padding-top: 120px;
-        margin: 0 auto;
-    }
-
-    .portfolio ul {
-        width: 580px;
-        margin: 0 auto;
-        text-align: justify;
-    }
-
-    .form {
-        width: 700px; /* 750 - 50 from padding */
-    }
-
-    input[type=text], textarea {
-        width: 670px; /* 750 - 50 -30 from padding */
     }
 
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (min-width: 1px) { /* Want to apply this to below media query - in order not to repeat the same code.. */
     
     html {
         background: #ffffff;
@@ -316,135 +442,42 @@ textarea {
         /* Workaround for footer */
     }
 
-    .about, .contact, .portfolio {
-        margin-bottom: 0;
-    }
-
     footer {
         position: absolute;
         bottom: 0;        
     }
-
-    nav {
-        position: relative;
-        width: 100%;
-        margin: 0 auto;
-    }
-    
+        
     .navWrapper {
         width: 100%;
-        margin: 0 auto;
     }
 
     section {
         width: 100%;
-        padding-top: 0px;
-        margin: 0 auto;
-        background-color: #ffffff;
+        padding-top: 60px;
+        padding-bottom: 50px;
+                
         /* Workaround for footer */
         min-height: 100vh; /* will cover the 100% of viewport */
         overflow: hidden;
         display: block;
         position: relative;
-        padding-bottom: 50px;
         /* Workaround for footer */
-    }
-
-    .portfolio ul {
-        width: 100%;
-        margin: 0 auto;
-        padding-left: 0;
-        padding-right: 0;
-        text-align: justify;
-        background-color: #ffffff;
-    }
-
-    .form {
-        width: 100%;
-        margin: 0 auto;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    input[type=text], textarea {
-        width: 100%;
-        margin: 0 auto;
-        padding-left: 0;
-        padding-right: 0;
     }
     
 }
 
 @media only screen and (max-width: 640px) {
     
-    html {
-        background: #ffffff;
-    }
-
-    body {       
-        /* Workaround for footer */
-        height: 100%;
-        position: relative;
-        margin: 0;
-        padding: 0;
-        /* Workaround for footer */
-    }
-
-    .about, .contact, .portfolio {
-        margin-bottom: 0;
-    }
-
-    footer {
-        position: absolute;
-        bottom: 0;        
-    }
-
     nav {
-        position: relative;
-        width: 100%;
-        margin: 0 auto;
-    }
-    
-    .navWrapper {
-        width: 100%;
-        margin: 0 auto;
+        position: relative; /* Static was requested, but need to use relative to accomplish the same results due to Hamburger Nav */
     }
 
     section {
-        width: 100%;
         padding-top: 0px;
-        margin: 0 auto;
-        background-color: #ffffff;
-        /* Workaround for footer */
-        min-height: 100vh; /* will cover the 100% of viewport */
-        overflow: hidden;
-        display: block;
-        position: relative;
-        padding-bottom: 50px;
-        /* Workaround for footer */
     }
 
-    .portfolio ul {
-        width: 100%;
-        margin: 0 auto;
-        padding-left: 0;
-        padding-right: 0;
-        text-align: center;
-        background-color: #ffffff;
-    }
-
-    .form {
-        width: 100%;
-        margin: 0 auto;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    input[type=text], textarea {
-        width: 100%;
-        margin: 0 auto;
-        padding-left: 0;
-        padding-right: 0;
+    .about, .contact, .portfolio {
+        padding-top: 9px;
     }
 
     .navLeft {
@@ -461,7 +494,7 @@ textarea {
         top: 0;
     }
 
-    /* Hamburger Nav */
+    /* Hamburger Nav - Prefer the look of this nav from what was requested + a little bit of JavaScript :) */
     .topnav a {
         display: none;
         color: #dddddd;
@@ -510,18 +543,12 @@ textarea {
     }
 
     .topnav {
-        /* overflow: hidden; */
-        /* min-width: 182px; */
         min-width: 100%;
         float: right;
-        background-color: transparent;
-        /* border-bottom: 1px solid #dddddd;
-        border-left: 1px solid #dddddd;
-        border-right: 1px solid #dddddd; */
-        
+        background-color: transparent;        
     }
     /* Hamburger Nav End */
-
+    
 }
 
 /*---------- Media Queries End ----------*/
