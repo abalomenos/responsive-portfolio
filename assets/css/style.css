@@ -50,7 +50,7 @@ footer {
     padding-bottom: 10px;
 	color: #cccccc;
 	background-color: #666666;
-	border-top: 4px solid #73a5bd; /* changed porder from basic portfolio, did not like the look of :) */
+	border-top: 4px solid #8FBFD3; /* changed porder from basic portfolio, did not like the look of :) */
     text-align: center;
 }
 
@@ -78,7 +78,7 @@ h1 {
 h2 {
     font-size: 34px;
     font-weight: bold;
-    color: #1387b8;;
+    color: #258EBB;;
     border-color: #cccccc;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -112,7 +112,7 @@ nav {
 
 .navLeft {
     float:left;
-    background-color: #7daabc;
+    background-color: #258EBB;
     padding: 24px 15px;
     margin: 0;
     
@@ -234,7 +234,7 @@ img.profile {
     width: 270px;
 	bottom: 50px;
 	text-align: center;
-	background-color: #7daabc;
+	background-color: #258EBB;
 	padding: 10px 0px 10px 0px;
 	color: #ffffff;
 }
@@ -284,16 +284,17 @@ textarea {
 }
 
 #submit {
-	background-color: #7daabc;
+	background-color: #258EBB;
 	color: #ffffff;
 	border: none;
     padding: 15px 24px;
+    border-radius: 4px; /* rounded corners */
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /* Shadow effect */
 }
 
 #submit:hover
 {
-  background-color: #ABCCCB;
+  background-color: #8FBFD3;
 }
 
 /*---------- Contact Page End ----------*/
@@ -314,17 +315,17 @@ textarea {
     0% {
         opacity: 1;
         background: unset;
-        background-color: #7daabc;
+        background-color: #258EBB;
     }
     20% {
         opacity: 0.5;
         background: unset;
-        background-color: #7daabc;
+        background-color: #258EBB;
     }
     40% {
         opacity: 0;
         background: unset;
-        background-color: #7daabc;
+        background-color: #258EBB;
     }
     60% {
         opacity: 0;
@@ -369,17 +370,17 @@ textarea {
     0% {
         opacity: 1;
         background: unset;
-        background-color: #7daabc;
+        background-color: #258EBB;
     }
     20% {
         opacity: 0.5;
         background: unset;
-        background-color: #7daabc;
+        background-color: #258EBB;
     }
     40% {
         opacity: 0;
         background: unset;
-        background-color: #7daabc;
+        background-color: #258EBB;
     }
     60% {
         opacity: 0;
@@ -492,6 +493,11 @@ textarea {
         text-align: right;
         left: 0;
         top: 0;
+    }
+
+    #submit {
+        width: 100%;
+        text-align: center;
     }
 
     /* Hamburger Nav - Prefer the look of this nav from what was requested + a little bit of JavaScript :) */
