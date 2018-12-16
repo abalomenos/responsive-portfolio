@@ -2,24 +2,31 @@
 /*------------ Main Structure ------------*/
 
 html {
-    
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)) repeat, url("../images/background_img.jpg") no-repeat center center;
+    min-height: 100%;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    
-    min-height: 100%;
     image-rendering: auto;
     image-rendering: crisp-edges;
     image-rendering: pixelated;
-    
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
     color: #777777;
     font-size: 16px;
+}
+
+section {
+    width: 960px;
+    padding: 125px 0;
+    margin: 0 auto;
+    background-color: transparent;
+    overflow: hidden;
+    display: block;
+    position: relative;    
 }
 
 .about, .contact, .portfolio {
@@ -32,14 +39,18 @@ body {
     text-align: left;
 }
 
-section {
-    width: 960px;
-    padding: 125px 0;
+.form, .aboutContent, .portfolio ul {
+    width: 100%;
     margin: 0 auto;
-    background-color: transparent;
-    overflow: hidden;
-    display: block;
-    position: relative;    
+    padding: 15px;
+
+    /* Avoid input and textarea getting pushed outside of div from padding */
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    box-sizing: border-box;
+    /* Avoid input and textarea getting pushed outside of div from padding */
 }
 
 footer {
@@ -70,8 +81,9 @@ h1 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     
     /* CSS Animations */
-    -webkit-animation: logo1 linear 10s 5s forwards; /* Safari 4.0 - 8.0 */
-    animation: logo1 linear 10s 5s forwards;
+    -webkit-animation: logo1 linear 6s 1s forwards; /* Safari 4.0 - 8.0 */
+    animation: logo1 linear 6s 1s forwards; /* or use "alternate infinite" to keep indefinitely - for my reference */
+    /* CSS Animations */
 }
 
 /* Define h2 style */
@@ -81,6 +93,15 @@ h2 {
     color: #258EBB;;
     border-color: #cccccc;
     font-family: Georgia, 'Times New Roman', Times, serif;
+
+    /* CSS Animations - actually aligning left due to width 0, doing this for mobile view transition */
+    width: 0%;
+    white-space: nowrap;
+    text-align: center;
+    transition: width ease;
+    -webkit-animation: header2 linear 1s forwards; /* Safari 4.0 - 8.0 */
+    animation: header2 linear 1s forwards;
+    /* CSS Animations - actually aligning left due to width 0, doing this for mobile view transition */
 }
 
 /* Define hr style */
@@ -117,8 +138,9 @@ nav {
     margin: 0;
     
     /* CSS Animations */
-    -webkit-animation: logo2 linear 10s 5s forwards; /* Safari 4.0 - 8.0 */
-    animation: logo2 linear 10s 5s forwards;
+    -webkit-animation: logo2 linear 6s 1s forwards; /* Safari 4.0 - 8.0 */
+    animation: logo2 linear 6s 1s forwards; /* or use "alternate infinite" to keep indefinitely - for my reference */
+    /* CSS Animations */
 }
 
 .navRight {
@@ -131,7 +153,7 @@ nav {
     display: inline-block;
 }
 
-/* Navigation separator | */ /* Not used here, keeping it for future reference */
+/* Navigation separator | - Not used here, keeping it for future reference */
 /* .navWrapper ul li+li {
 	border-left: 1px solid #dddddd;
 } */
@@ -210,11 +232,7 @@ img.profile {
 /*------------ Portfolio Page ------------*/
 
 .portfolio ul {
-    overflow: hidden;
-    display: block;
-    position: relative;
-    width: 100%;
-    margin: 0 auto;
+    padding: 5px;
     text-align: center;
 }
 
@@ -223,7 +241,7 @@ img.profile {
     display: inline-block;
 	width: 270px;
     height: 200px;
-    border: 1px solid #dddddd;
+    border: 2px solid #dddddd;
     margin: 10px;
     padding: 0;
     transition: all .2s ease-in-out; /* Scale on Hover with Transition */
@@ -231,8 +249,8 @@ img.profile {
 
 .portfolio p {
     position: absolute;
-    width: 270px;
-	bottom: 50px;
+    width: 100%;
+	bottom: 30px;
 	text-align: center;
 	background-color: #258EBB;
 	padding: 10px 0px 10px 0px;
@@ -248,13 +266,6 @@ img.profile {
 
 
 /*------------ Contact Page ------------*/
-
-.form {
-    width: 100%;
-    margin: 0 auto;
-    padding-left: 0;
-    padding-right: 0;
-}
 
 #contactform {
     width: 100%;
@@ -276,7 +287,7 @@ input[type=text], textarea {
     -ms-box-sizing: border-box;
     -o-box-sizing: border-box;
     box-sizing: border-box;
-/* Avoid input and textarea getting pushed outside of div from padding */
+    /* Avoid input and textarea getting pushed outside of div from padding */
 }
 
 textarea {
@@ -290,11 +301,20 @@ textarea {
     padding: 15px 24px;
     border-radius: 4px; /* rounded corners */
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19); /* Shadow effect */
+
+    /* CSS Animations - actually aligning left due to width 0, doing this for mobile view transition */
+    width: 100px;
+    white-space: nowrap;
+    text-align: center;
+    transition: width ease;
+    -webkit-animation: submit linear 1s forwards; /* Safari 4.0 - 8.0 */
+    animation: submit linear 1s forwards;
+    /* CSS Animations - actually aligning left due to width 0, doing this for mobile view transition */
 }
 
 #submit:hover
 {
-  background-color: #8FBFD3;
+    background-color: #8FBFD3;
 }
 
 /*---------- Contact Page End ----------*/
@@ -428,7 +448,7 @@ textarea {
 
 }
 
-@media only screen and (max-width: 768px) and (min-width: 1px) { /* Want to apply this to below media query - in order not to repeat the same code.. */
+@media only screen and (max-width: 768px) and (min-width: 1px) { /* Want to apply this to below media query as well - in order not to repeat the same code.. */
     
     html {
         background: #ffffff;
@@ -441,11 +461,6 @@ textarea {
         margin: 0;
         padding: 0;
         /* Workaround for footer */
-    }
-
-    footer {
-        position: absolute;
-        bottom: 0;        
     }
         
     .navWrapper {
@@ -469,12 +484,56 @@ textarea {
 
 @media only screen and (max-width: 640px) {
     
+    /* CSS Animation specific to mobile */
+    @-webkit-keyframes header2 { /* Safari 4.0 - 8.0 */
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+    
+    @keyframes header2 {
+        0% {
+            width: 0;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+
+    @-webkit-keyframes submit { /* Safari 4.0 - 8.0 */
+        0% {
+            width: 100px;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+    
+    @keyframes submit {
+        0% {
+            width: 100px;
+        }
+        100% {
+            width: 100%;
+        }
+    }
+    /* CSS Animation specific to mobile */
+
     nav {
-        position: relative; /* Static was requested, but need to use relative to accomplish the same results due to Hamburger Nav */
+        position: relative; /* Static was requested, but need to use relative to accomplish the same result due to Hamburger Nav */
     }
 
     section {
         padding-top: 0px;
+    }
+
+    /* Similar to nav, so it wont stick on the bottom for small screens */
+    footer {
+        position: absolute;
+        bottom: 0;
     }
 
     .about, .contact, .portfolio {
@@ -486,7 +545,7 @@ textarea {
         padding: 24px 0;
         text-align: center;
     }
-    
+
     .navRight {
         position: absolute;
         width: 100%;
@@ -500,7 +559,7 @@ textarea {
         text-align: center;
     }
 
-    /* Hamburger Nav - Prefer the look of this nav from what was requested + a little bit of JavaScript :) */
+    /* Hamburger Nav - Prefer the look of this nav from what was requested + a little bit of JavaScript needed for this :) */
     .topnav a {
         display: none;
         color: #dddddd;
@@ -528,7 +587,6 @@ textarea {
         background-color: transparent;
     }
     
-
     .topnav.responsive a {
         float: none;
         display: block;
