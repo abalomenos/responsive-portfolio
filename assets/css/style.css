@@ -79,7 +79,7 @@ h1 {
     color: #ffffff;
     border-color: #cccccc;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    
+
     /* CSS Animations */
     -webkit-animation: logo1 linear 6s 1s forwards; /* Safari 4.0 - 8.0 */
     animation: logo1 linear 6s 1s forwards; /* or use "alternate infinite" to keep indefinitely - for my reference */
@@ -136,7 +136,7 @@ nav {
     background-color: #258EBB;
     padding: 24px 15px;
     margin: 0;
-    
+
     /* CSS Animations */
     -webkit-animation: logo2 linear 6s 1s forwards; /* Safari 4.0 - 8.0 */
     animation: logo2 linear 6s 1s forwards; /* or use "alternate infinite" to keep indefinitely - for my reference */
@@ -146,11 +146,6 @@ nav {
 .navRight {
     float: right;
     font-size: 14px;
-}
-
-/* Navigation menu items */
-.navWrapper ul li {
-    display: inline-block;
 }
 
 /* Navigation separator | - Not used here, keeping it for future reference */
@@ -331,7 +326,7 @@ textarea {
     }
 }
 
-  @-webkit-keyframes logo2 { /* Safari 4.0 - 8.0 */
+@-webkit-keyframes logo2 { /* Safari 4.0 - 8.0 */
     0% {
         opacity: 1;
         background: unset;
@@ -374,10 +369,9 @@ textarea {
         image-rendering: crisp-edges;
         image-rendering: pixelated;
     }
-  }
-  
-  /* Standard syntax */
-  @keyframes logo1 {
+}
+
+@keyframes logo1 { /* Standard syntax */
     from {
         color: #ffffff;
     }
@@ -386,7 +380,7 @@ textarea {
     }
 }
 
-  @keyframes logo2 {
+@keyframes logo2 { /* Standard syntax */
     0% {
         opacity: 1;
         background: unset;
@@ -437,7 +431,7 @@ textarea {
 /*------------ Media Queries ------------*/
 
 @media only screen and (max-width: 980px) {
-    
+
     .navWrapper {
         width: 750px;
     }
@@ -449,12 +443,12 @@ textarea {
 }
 
 @media only screen and (max-width: 768px) and (min-width: 1px) { /* Want to apply this to below media query as well - in order not to repeat the same code.. */
-    
+
     html {
         background: #ffffff;
     }
 
-    body {       
+    body {
         /* Workaround for footer */
         height: 100%;
         position: relative;
@@ -462,7 +456,7 @@ textarea {
         padding: 0;
         /* Workaround for footer */
     }
-        
+
     .navWrapper {
         width: 100%;
     }
@@ -471,7 +465,7 @@ textarea {
         width: 100%;
         padding-top: 60px;
         padding-bottom: 50px;
-                
+
         /* Workaround for footer */
         min-height: 100vh; /* will cover the 100% of viewport */
         overflow: hidden;
@@ -479,7 +473,7 @@ textarea {
         position: relative;
         /* Workaround for footer */
     }
-    
+
 }
 
 @media only screen and (max-width: 640px) {
@@ -493,8 +487,8 @@ textarea {
             width: 100%;
         }
     }
-    
-    @keyframes header2 {
+
+    @keyframes header2 { /* Standard syntax */
         0% {
             width: 0;
         }
@@ -511,8 +505,8 @@ textarea {
             width: 100%;
         }
     }
-    
-    @keyframes submit {
+
+    @keyframes submit { /* Standard syntax */
         0% {
             width: 100px;
         }
@@ -573,7 +567,7 @@ textarea {
         width: 100%;
         background-color: transparent;
     }
-  
+
     .topnav.responsive {
         position: relative;
         padding-top: 73px;
@@ -586,7 +580,7 @@ textarea {
         text-align: right;
         background-color: transparent;
     }
-    
+
     .topnav.responsive a {
         float: none;
         display: block;
@@ -612,7 +606,7 @@ textarea {
         background-color: transparent;        
     }
     /* Hamburger Nav End */
-    
+
 }
 
 /*---------- Media Queries End ----------*/
