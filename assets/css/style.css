@@ -564,7 +564,7 @@ textarea {
         float: right;
         text-align: right;
         display: block;
-        width: 100%;
+        width: 17px;
         background-color: transparent;
     }
 
@@ -578,8 +578,18 @@ textarea {
         right: 0;
         top: 0;
         text-align: right;
+        /* Hamburger Icon size fix */
+        background-color: transparent;
+        width: 17px;
+        border-bottom-color: transparent;
+        /* Hamburger Icon size fix */
+    }
+
+    /* Hamburger Icon on Hover fix */
+    .topnav.responsive .icon:hover {
         background-color: transparent;
     }
+    /* Hamburger Icon on Hover fix */
 
     .topnav.responsive a {
         float: none;
@@ -588,6 +598,7 @@ textarea {
         color: #dddddd;
         background-color:rgba(65, 65, 65, 0.6);
         border-bottom: 2px solid #dddddd;
+        border-top: 2px solid #dddddd;
     }
 
     .topnav.responsive a:hover {
