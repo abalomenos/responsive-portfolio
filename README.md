@@ -1,4 +1,4 @@
-# responsive-portfolio
+# Responsive Portfolio
 
 This is a responsive professional portfolio site using HTML, CSS and Media Queries to achieve a mobile-responsive layout.
 
